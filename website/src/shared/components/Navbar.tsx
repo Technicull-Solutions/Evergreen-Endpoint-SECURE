@@ -65,7 +65,7 @@ export default function Navbar() {
       {customBranding ? (
         <>
           <img
-            src={LOGO_URL ?? '/yopass.svg'}
+            src={LOGO_URL ?? '/evergreen-secure-mark.svg'}
             alt={APP_NAME ?? 'Yopass'}
             className={`h-8 w-auto max-w-16 object-contain shrink-0${HIDE_APP_NAME ? '' : ' mr-2 sm:mr-3'}`}
           />
@@ -75,11 +75,15 @@ export default function Navbar() {
         </>
       ) : (
         <img
-          src={mode === 'dark' ? '/yopass-full-dark.svg' : '/yopass-full.svg'}
-          alt="Yopass"
-          width={138}
-          height={28}
-          className="h-6 w-auto sm:h-7 shrink-0"
+          src={
+            mode === 'dark'
+              ? '/evergreen-endpoint-secure-dark.svg'
+              : '/evergreen-endpoint-secure-light.svg'
+          }
+          alt="Evergreen Endpoint | SECURE"
+          width={318}
+          height={72}
+          className="evergreen-wordmark h-9 w-auto sm:h-11 shrink-0"
         />
       )}
     </a>
@@ -89,7 +93,7 @@ export default function Navbar() {
   // and the settings menu (language, theme), no navigation links.
   if (responderPage) {
     return (
-      <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-lg border-b border-base-300">
+      <header className="evergreen-header sticky top-0 z-50 bg-base-100/90 backdrop-blur-lg border-b border-base-300">
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center min-w-0">{logo}</div>
@@ -103,7 +107,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-lg border-b border-base-300">
+    <header className="evergreen-header sticky top-0 z-50 bg-base-100/90 backdrop-blur-lg border-b border-base-300">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center min-w-0">{logo}</div>

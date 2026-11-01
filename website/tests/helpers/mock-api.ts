@@ -234,8 +234,8 @@ export class MockAPI {
       DEFAULT_EXPIRY: 3600,
       MAX_FILE_SIZE: '1MB',
       MAX_REQUEST_FILE_SIZE: '512KB',
-      THEME_LIGHT: 'emerald',
-      THEME_DARK: 'dim',
+      THEME_LIGHT: 'evergreen-light',
+      THEME_DARK: 'evergreen-dark',
       ...config,
     };
 

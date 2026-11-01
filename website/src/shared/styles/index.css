@@ -3,6 +3,127 @@
   themes: all;
 }
 
+@plugin "daisyui/theme" {
+  name: 'evergreen-light';
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #f7faf8;
+  --color-base-200: #e2f5e9;
+  --color-base-300: #c9e7d9;
+  --color-base-content: #17211d;
+  --color-primary: #176b4d;
+  --color-primary-content: #f7faf8;
+  --color-secondary: #0d3f30;
+  --color-secondary-content: #f7faf8;
+  --color-accent: #d69b2d;
+  --color-accent-content: #17211d;
+  --color-neutral: #526159;
+  --color-neutral-content: #f7faf8;
+  --color-info: #1c5fb8;
+  --color-info-content: #ffffff;
+  --color-success: #2e8b57;
+  --color-success-content: #ffffff;
+  --color-warning: #d69b2d;
+  --color-warning-content: #17211d;
+  --color-error: #b83d3d;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.375rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.75rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: 'evergreen-dark';
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: #17231f;
+  --color-base-200: #0d171d;
+  --color-base-300: #30423a;
+  --color-base-content: #dce5df;
+  --color-primary: #74c7a4;
+  --color-primary-content: #0d171d;
+  --color-secondary: #d69b2d;
+  --color-secondary-content: #17211d;
+  --color-accent: #d69b2d;
+  --color-accent-content: #17211d;
+  --color-neutral: #aabbb0;
+  --color-neutral-content: #0d171d;
+  --color-info: #a6d4ff;
+  --color-info-content: #0d171d;
+  --color-success: #54ad88;
+  --color-success-content: #0d171d;
+  --color-warning: #e7c84a;
+  --color-warning-content: #17211d;
+  --color-error: #ff7777;
+  --color-error-content: #17211d;
+  --radius-selector: 0.375rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.75rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+:root {
+  font-family: Lato, 'Segoe UI', Arial, sans-serif;
+  font-synthesis: none;
+}
+
+body {
+  min-width: 320px;
+}
+
+.evergreen-shell {
+  background-image:
+    radial-gradient(
+      circle at 12% 8%,
+      color-mix(in srgb, var(--color-primary) 9%, transparent) 0,
+      transparent 28rem
+    ),
+    linear-gradient(
+      135deg,
+      transparent 0 74%,
+      color-mix(in srgb, var(--color-accent) 5%, transparent) 74% 74.15%,
+      transparent 74.15%
+    );
+}
+
+.evergreen-header {
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+.evergreen-wordmark {
+  width: min(15.75rem, 58vw);
+}
+
+.secure-card {
+  box-shadow: 0 18px 50px
+    color-mix(in srgb, var(--color-secondary) 8%, transparent);
+}
+
+.evergreen-footer-brand {
+  color: color-mix(in srgb, var(--color-base-content) 76%, transparent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+:focus-visible {
+  outline-color: var(--color-accent);
+}
+
+@media (max-width: 520px) {
+  .evergreen-wordmark {
+    width: 10.75rem;
+  }
+}
+
 @keyframes result-enter {
   from {
     opacity: 0;

@@ -1,14 +1,14 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="website/public/yopass-full-dark.svg">
-    <img src="website/public/yopass-full.svg" alt="Yopass" width="430">
+    <source media="(prefers-color-scheme: dark)" srcset="website/public/evergreen-endpoint-secure-dark.svg">
+    <img src="website/public/evergreen-endpoint-secure-light.svg" alt="Evergreen Endpoint | SECURE" width="430">
   </picture>
 </p>
 
 <h1 align="center">Share secrets without leaving plaintext behind</h1>
 
 <p align="center">
-  Yopass is an open source, self-hosted service for sharing passwords, files, and other sensitive information.
+  Evergreen Endpoint | SECURE is the Technicull Solutions distribution of Yopass, an open source, self-hosted service for sharing passwords, files, and other sensitive information.
   The browser encrypts your secret before it reaches the server and the decryption key is never stored with the secret.
 </p>
 
@@ -17,7 +17,7 @@
   ·
   <a href="https://yopass.se/docs"><strong>Read the docs</strong></a>
   ·
-  <a href="#quick-start"><strong>Self-host Yopass</strong></a>
+  <a href="#quick-start"><strong>Self-host SECURE</strong></a>
 </p>
 
 <p align="center">
@@ -84,6 +84,7 @@ Yopass must be served over HTTPS in production so the web application and encryp
 
 | Deployment | Start here |
 | --- | --- |
+| Technicull production (`secure.technicull.ca`) | [`deploy/docker-compose/technicull-secure`](deploy/docker-compose/technicull-secure) |
 | Docker Compose with automatic Let's Encrypt certificates | [`deploy/docker-compose/with-nginx-proxy-and-letsencrypt`](deploy/docker-compose/with-nginx-proxy-and-letsencrypt) |
 | Docker Compose behind an existing reverse proxy | [`deploy/docker-compose/insecure`](deploy/docker-compose/insecure) |
 | Kubernetes | [`deploy/yopass-k8.yaml`](deploy/yopass-k8.yaml) |

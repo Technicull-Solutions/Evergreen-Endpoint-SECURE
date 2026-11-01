@@ -47,7 +47,10 @@ yopass-server \
   --theme-dark    "business"
 ```
 
-Defaults are `emerald` (light) and `dim` (dark).
+This distribution defaults to the built-in `evergreen-light` and
+`evergreen-dark` product themes. Both are defined in the website stylesheet, so
+the Evergreen Endpoint appearance is available without external assets or a
+runtime custom-theme override.
 
 To hide the theme switch and keep a fixed appearance, set `--no-theme-switcher`
 (or `NO_THEME_SWITCHER=true`). This always uses `THEME_LIGHT` and

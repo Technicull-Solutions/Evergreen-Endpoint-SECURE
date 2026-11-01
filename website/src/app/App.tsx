@@ -60,7 +60,7 @@ export default function App() {
   // Whether creation pages must show the login gate instead of their content.
   const needsLogin = REQUIRE_AUTH && !authLoading && !isAuthenticated;
   return (
-    <div className="min-h-screen bg-base-200 flex flex-col overflow-x-hidden">
+    <div className="evergreen-shell min-h-screen bg-base-200 flex flex-col overflow-x-hidden">
       <button
         onClick={() => {
           const main = document.getElementById('main-content');
@@ -80,7 +80,7 @@ export default function App() {
           tabIndex={-1}
           className="w-full max-w-3xl mx-auto mb-auto px-4 py-12 sm:py-16 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
-          <div className="card bg-base-100 shadow-sm border border-base-300">
+          <div className="secure-card card bg-base-100 border border-base-300">
             <div className="card-body p-6 sm:p-10">
               {loginUnavailable && (
                 <div role="alert" className="alert alert-warning mb-6">
@@ -181,6 +181,9 @@ export default function App() {
       <footer className="bg-base-100/50 border-t border-base-300">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col items-center text-center space-y-4">
+            <div className="evergreen-footer-brand">
+              Evergreen Endpoint <span aria-hidden="true">|</span> SECURE
+            </div>
             <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
               {PRIVACY_NOTICE_URL && PRIVACY_NOTICE_URL.trim() && (
                 <>
@@ -209,7 +212,7 @@ export default function App() {
                 </>
               )}
               <span className="text-base-content/70">
-                &copy; 2014&ndash;{new Date().getFullYear()}{' '}
+                Powered by &copy; 2014&ndash;{new Date().getFullYear()}{' '}
                 <a
                   href="https://yopass.se"
                   className="text-primary hover:text-primary-focus font-medium transition-colors duration-200 underline decoration-dotted underline-offset-4 hover:decoration-solid"

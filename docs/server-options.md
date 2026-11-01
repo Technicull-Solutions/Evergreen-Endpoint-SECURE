@@ -217,8 +217,8 @@ See [OpenID Connect](./openid-connect) for provider-specific setup and multi-ins
 | `--app-name` | `APP_NAME` | — | Custom application name shown in the UI (default: Yopass) |
 | `--hide-app-name` | `HIDE_APP_NAME` | `false` | Hide the application name in the navbar while keeping the logo; does not change the browser tab title |
 | `--logo-url` | `LOGO_URL` | — | URL to a custom logo image (e.g. `/mylogo.svg` for a file in the `public/` directory, or an external CDN URL) |
-| `--theme-light` | `THEME_LIGHT` | `emerald` | DaisyUI theme name for light mode |
-| `--theme-dark` | `THEME_DARK` | `dim` | DaisyUI theme name for dark mode |
+| `--theme-light` | `THEME_LIGHT` | `evergreen-light` | DaisyUI theme name for light mode |
+| `--theme-dark` | `THEME_DARK` | `evergreen-dark` | DaisyUI theme name for dark mode |
 | `--theme-custom-light` | `THEME_CUSTOM_LIGHT` | — | JSON object of CSS variables for a fully custom light theme (keys must start with `--`; only `--color-*` is officially supported, see [theming docs](./theming.md)) |
 | `--theme-custom-dark` | `THEME_CUSTOM_DARK` | — | JSON object of CSS variables for a fully custom dark theme (keys must start with `--`; only `--color-*` is officially supported, see [theming docs](./theming.md)) |
 

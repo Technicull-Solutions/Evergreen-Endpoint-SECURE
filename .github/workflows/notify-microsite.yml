@@ -2,9 +2,6 @@ name: Rebuild microsite after docs changes
 
 # yamllint disable-line rule:truthy
 on:
-  push:
-    branches: [master]
-    paths: ["docs/**"]
   workflow_dispatch: {}
 
 permissions:

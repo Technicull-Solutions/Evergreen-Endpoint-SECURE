@@ -10,7 +10,7 @@ RUN VERSION=${VERSION:-$(git rev-parse --short HEAD 2>/dev/null || echo "unknown
 FROM node:22 AS website
 COPY website /website
 WORKDIR /website
-RUN yarn install --network-timeout 600000 && yarn build
+RUN yarn install --frozen-lockfile --network-timeout 600000 && yarn build
 
 FROM gcr.io/distroless/base
 COPY --from=app /yopass/yopass /yopass/yopass-server /

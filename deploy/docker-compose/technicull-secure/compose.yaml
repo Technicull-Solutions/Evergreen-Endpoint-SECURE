@@ -1,0 +1,104 @@
+name: yopass
+
+services:
+  redis:
+    image: redis:7.4.9-alpine
+    restart: unless-stopped
+    command:
+      - redis-server
+      - --appendonly
+      - "yes"
+      - --appendfsync
+      - everysec
+      - --maxmemory
+      - ${YOPASS_REDIS_MAXMEMORY:-256mb}
+      - --maxmemory-policy
+      - noeviction
+    volumes:
+      - ${SECURE_DATA_ROOT:-/mnt/NVME/evergreen-endpoint-secure}/redis:/data
+    networks:
+      - yopass-internal
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+
+  yopass:
+    image: ghcr.io/technicull-solutions/evergreen-endpoint-secure:${SECURE_IMAGE_TAG:-latest}
+    pull_policy: always
+    restart: unless-stopped
+    init: true
+    depends_on:
+      redis:
+        condition: service_healthy
+    ports:
+      - ${YOPASS_BIND_ADDRESS:-127.0.0.1}:${YOPASS_PORT:-1337}:1337
+    environment:
+      ADDRESS: 0.0.0.0
+      PORT: "1337"
+      DATABASE: redis
+      REDIS: redis://redis:6379/0
+      FILE_STORE: disk
+      FILE_STORE_PATH: /data/yopass-files
+      MAX_FILE_SIZE: ${YOPASS_MAX_FILE_SIZE:-1MB}
+      CLEANUP_INTERVAL: "60"
+      DEFAULT_EXPIRY: ${YOPASS_DEFAULT_EXPIRY:-1h}
+      FORCE_EXPIRATION: ${YOPASS_FORCE_EXPIRATION:-1h}
+      FORCE_ONETIME_SECRETS: "true"
+      PREFETCH_SECRET: "true"
+      ARGON2: "true"
+      PUBLIC_URL: ${YOPASS_PUBLIC_URL:-https://secure.technicull.ca}
+      CORS_ALLOW_ORIGIN: ${YOPASS_PUBLIC_URL:-https://secure.technicull.ca}
+      PRIVACY_NOTICE_URL: ${YOPASS_PRIVACY_URL:-https://technicull.ca/privacy.html}
+      DISABLE_FEATURES: "true"
+      NO_LANGUAGE_SWITCHER: "true"
+      LOG_LEVEL: info
+    volumes:
+      - ${SECURE_DATA_ROOT:-/mnt/NVME/evergreen-endpoint-secure}/files:/data/yopass-files
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test:
+        - CMD
+        - /yopass-server
+        - --health-check
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+    networks:
+      - yopass-internal
+      - cloudflared
+
+networks:
+  yopass-internal:
+    name: yopass-internal
+    driver: bridge
+    internal: true
+  cloudflared:
+    external: true
+    name: ix-cloudflared_default

@@ -76,7 +76,9 @@ it('uses the default icon without its wordmark when the name is hidden', async (
   state.config.HIDE_APP_NAME = true;
   const brand = await render();
   expect(brand.textContent).toBe('');
-  expect(brand.querySelector('img')!.getAttribute('src')).toBe('/yopass.svg');
+  expect(brand.querySelector('img')!.getAttribute('src')).toBe(
+    '/evergreen-secure-mark.svg',
+  );
   expect(brand.querySelector('img')!.alt).toBe('Yopass');
   expect(document.title).toBe('Yopass');
 });
@@ -96,7 +98,7 @@ it('keeps the default wordmark when no branding options are set', async () => {
   localStorage.setItem('themeMode', 'light');
   const brand = await render();
   expect(brand.querySelector('img')!.getAttribute('src')).toBe(
-    '/yopass-full.svg',
+    '/evergreen-endpoint-secure-light.svg',
   );
 });
 

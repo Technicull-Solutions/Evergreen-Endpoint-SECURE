@@ -147,10 +147,10 @@ test.describe('Settings menu', () => {
     // The icons overlay the checkbox, so toggle by clicking the label.
     await themeToggle.click();
     await expect(themeInput).toBeChecked();
-    await expect(html).toHaveAttribute('data-theme', 'dim');
+    await expect(html).toHaveAttribute('data-theme', 'evergreen-dark');
 
     await themeToggle.click();
-    await expect(html).toHaveAttribute('data-theme', 'emerald');
+    await expect(html).toHaveAttribute('data-theme', 'evergreen-light');
   });
 
   test('custom color override keeps the base theme background', async ({

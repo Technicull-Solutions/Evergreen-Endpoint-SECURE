@@ -2,13 +2,6 @@ name: Deploy sharing app to Cloudflare Pages
 
 # yamllint disable-line rule:truthy
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - "website/**"
-  schedule:
-    - cron: "43 3 * * *"
   workflow_dispatch: {}
 
 permissions:

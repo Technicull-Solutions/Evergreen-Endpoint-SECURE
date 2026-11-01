@@ -9,8 +9,8 @@ import (
 // when no valid license overrides them. cmd/yopass-server uses them as the
 // defaults for the --theme-light and --theme-dark flags.
 const (
-	DefaultThemeLight = "emerald"
-	DefaultThemeDark  = "dim"
+	DefaultThemeLight = "evergreen-light"
+	DefaultThemeDark  = "evergreen-dark"
 )
 
 func (y *Server) configHandler(w http.ResponseWriter, r *http.Request) {
