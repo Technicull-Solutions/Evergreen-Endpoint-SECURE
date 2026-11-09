@@ -65,7 +65,7 @@ export default function Navbar() {
       {customBranding ? (
         <>
           <img
-            src={LOGO_URL ?? '/evergreen-secure-mark.svg'}
+            src={LOGO_URL ?? '/evergreen-endpoint-shield.png'}
             alt={APP_NAME ?? 'Yopass'}
             className={`h-8 w-auto max-w-16 object-contain shrink-0${HIDE_APP_NAME ? '' : ' mr-2 sm:mr-3'}`}
           />
@@ -81,9 +81,9 @@ export default function Navbar() {
               : '/evergreen-endpoint-secure-light.svg'
           }
           alt="Evergreen Endpoint | SECURE"
-          width={318}
-          height={72}
-          className="evergreen-wordmark h-9 w-auto sm:h-11 shrink-0"
+          width={172}
+          height={30}
+          className="evergreen-wordmark h-7 w-auto sm:h-8 shrink-0"
         />
       )}
     </a>

@@ -77,7 +77,7 @@ it('uses the default icon without its wordmark when the name is hidden', async (
   const brand = await render();
   expect(brand.textContent).toBe('');
   expect(brand.querySelector('img')!.getAttribute('src')).toBe(
-    '/evergreen-secure-mark.svg',
+    '/evergreen-endpoint-shield.png',
   );
   expect(brand.querySelector('img')!.alt).toBe('Yopass');
   expect(document.title).toBe('Yopass');

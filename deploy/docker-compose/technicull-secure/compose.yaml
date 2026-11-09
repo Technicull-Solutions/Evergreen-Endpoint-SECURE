@@ -1,4 +1,4 @@
-name: yopass
+name: evergreen-endpoint-secure
 
 services:
   redis:
@@ -17,7 +17,7 @@ services:
     volumes:
       - ${SECURE_DATA_ROOT:-/mnt/NVME/evergreen-endpoint-secure}/redis:/data
     networks:
-      - yopass-internal
+      - ee-secure-internal
     healthcheck:
       test:
         - CMD
@@ -31,14 +31,18 @@ services:
       - no-new-privileges:true
     cap_drop:
       - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
     logging:
       driver: json-file
       options:
         max-size: 10m
         max-file: "3"
 
-  yopass:
-    image: ghcr.io/technicull-solutions/evergreen-endpoint-secure:${SECURE_IMAGE_TAG:-latest}
+  evergreen-endpoint-secure:
+    image: ghcr.io/technicull-solutions/evergreen-endpoint-secure:${SECURE_IMAGE_TAG:-v14.4.0-ee.1}
     pull_policy: always
     restart: unless-stopped
     init: true
@@ -91,12 +95,14 @@ services:
         max-size: 10m
         max-file: "3"
     networks:
-      - yopass-internal
-      - cloudflared
+      ee-secure-internal:
+      cloudflared:
+        aliases:
+          - yopass
 
 networks:
-  yopass-internal:
-    name: yopass-internal
+  ee-secure-internal:
+    name: evergreen-endpoint-secure-internal
     driver: bridge
     internal: true
   cloudflared:

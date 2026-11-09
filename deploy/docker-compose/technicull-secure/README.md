@@ -2,8 +2,12 @@
 
 This stack is the drop-in replacement for the existing `yopass` deployment at
 `https://secure.technicull.ca`. It preserves the externally visible hostname,
-the loopback listener on port `1337`, the Compose project and service name used
-by the current stack, and membership in `ix-cloudflared_default`.
+the loopback listener on port `1337`, a `yopass` Cloudflared network alias for
+legacy tunnel-origin compatibility, and membership in
+`ix-cloudflared_default`. The application service and Compose project are both
+named `evergreen-endpoint-secure`, and the private network is named
+`evergreen-endpoint-secure-internal`, so the stack does not reuse the old
+Yopass project or internal network.
 
 It does not reuse the current Redis or file-store datasets. The default dataset
 root is `/mnt/NVME/evergreen-endpoint-secure`; change `SECURE_DATA_ROOT` in the
@@ -19,8 +23,9 @@ Dockge environment if the datasets are created elsewhere.
 3. Grant the Redis container write access to `redis` and UID `1000` write access
    to `files`. Confirm the actual Redis UID from the pinned image on the host
    before applying dataset ownership; do not make either dataset world-writable.
-4. Copy `.env.example` to Dockge's stack environment and pin
-   `SECURE_IMAGE_TAG` to a tested release or `sha-<commit>` tag.
+4. Copy `.env.example` to Dockge's stack environment. The supplied
+   `SECURE_IMAGE_TAG=v14.4.0-ee.1` pins the first branded release; update it only
+   after validating a newer immutable tag.
 5. Pull the image before the change window and confirm the pull succeeds. A
    private GHCR package requires a read-only package credential configured on
    the Docker host; never store that credential in this Compose file.

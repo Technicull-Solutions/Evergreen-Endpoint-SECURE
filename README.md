@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="website/public/evergreen-endpoint-secure-dark.svg">
-    <img src="website/public/evergreen-endpoint-secure-light.svg" alt="Evergreen Endpoint | SECURE" width="430">
+    <img src="website/public/evergreen-endpoint-secure-light.svg" alt="Evergreen Endpoint | SECURE" width="344">
   </picture>
 </p>
 
