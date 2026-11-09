@@ -19,6 +19,7 @@ import { downloadBlob } from '@shared/lib/download';
 import ProvideSecret from '@features/request-secret/ProvideSecret';
 import ReceiptList from '@features/receipts/ReceiptList';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '@shared/theme/ThemeProvider';
 
 export default function App() {
   const {
@@ -33,6 +34,7 @@ export default function App() {
   } = useConfig();
   const { isAuthenticated, loading: authLoading } = useAuth();
   const { t } = useTranslation();
+  const { mode } = useTheme();
 
   // The route can unmount while a one-time fetch is pending. Keep every
   // collected answer here until explicitly closed, without persisting content.
@@ -181,9 +183,17 @@ export default function App() {
       <footer className="bg-base-100/50 border-t border-base-300">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col items-center text-center space-y-4">
-            <div className="evergreen-footer-brand">
-              Evergreen Endpoint <span aria-hidden="true">|</span> SECURE
-            </div>
+            <img
+              src={
+                mode === 'dark'
+                  ? '/ees-wordmark-pale-mint-v2.svg'
+                  : '/ees-wordmark-ink-v2.svg'
+              }
+              alt="Evergreen Endpoint | SECURE"
+              width={172}
+              height={30}
+              className="h-7 w-auto"
+            />
             <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
               {PRIVACY_NOTICE_URL && PRIVACY_NOTICE_URL.trim() && (
                 <>

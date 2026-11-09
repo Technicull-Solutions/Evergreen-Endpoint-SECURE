@@ -24,8 +24,8 @@ Dockge environment if the datasets are created elsewhere.
    to `files`. Confirm the actual Redis UID from the pinned image on the host
    before applying dataset ownership; do not make either dataset world-writable.
 4. Copy `.env.example` to Dockge's stack environment. The supplied
-   `SECURE_IMAGE_TAG=v14.4.0-ee.1` pins the first branded release; update it only
-   after validating a newer immutable tag.
+   `SECURE_IMAGE_TAG=v14.4.0-ee.2` pins the corrected branded release; update it
+   only after validating a newer immutable tag.
 5. Pull the image before the change window and confirm the pull succeeds. A
    private GHCR package requires a read-only package credential configured on
    the Docker host; never store that credential in this Compose file.

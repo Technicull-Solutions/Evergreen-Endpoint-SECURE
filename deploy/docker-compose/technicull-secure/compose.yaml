@@ -42,7 +42,7 @@ services:
         max-file: "3"
 
   evergreen-endpoint-secure:
-    image: ghcr.io/technicull-solutions/evergreen-endpoint-secure:${SECURE_IMAGE_TAG:-v14.4.0-ee.1}
+    image: ghcr.io/technicull-solutions/evergreen-endpoint-secure:${SECURE_IMAGE_TAG:-v14.4.0-ee.2}
     pull_policy: always
     restart: unless-stopped
     init: true
@@ -61,7 +61,6 @@ services:
       MAX_FILE_SIZE: ${YOPASS_MAX_FILE_SIZE:-1MB}
       CLEANUP_INTERVAL: "60"
       DEFAULT_EXPIRY: ${YOPASS_DEFAULT_EXPIRY:-1h}
-      FORCE_EXPIRATION: ${YOPASS_FORCE_EXPIRATION:-1h}
       FORCE_ONETIME_SECRETS: "true"
       PREFETCH_SECRET: "true"
       ARGON2: "true"

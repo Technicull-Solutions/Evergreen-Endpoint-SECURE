@@ -98,7 +98,7 @@ it('keeps the default wordmark when no branding options are set', async () => {
   localStorage.setItem('themeMode', 'light');
   const brand = await render();
   expect(brand.querySelector('img')!.getAttribute('src')).toBe(
-    '/evergreen-endpoint-secure-light.svg',
+    '/ees-wordmark-ink-v2.svg',
   );
 });
 

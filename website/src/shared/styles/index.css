@@ -106,14 +106,6 @@ body {
     color-mix(in srgb, var(--color-secondary) 8%, transparent);
 }
 
-.evergreen-footer-brand {
-  color: color-mix(in srgb, var(--color-base-content) 76%, transparent);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 :focus-visible {
   outline-color: var(--color-accent);
 }

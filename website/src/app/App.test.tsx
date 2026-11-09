@@ -15,6 +15,9 @@ vi.mock('@shared/hooks/useConfig', () => ({ useConfig: () => config }));
 vi.mock('@shared/hooks/useAuth', () => ({
   useAuth: () => ({ isAuthenticated: true, loading: false }),
 }));
+vi.mock('@shared/theme/ThemeProvider', () => ({
+  useTheme: () => ({ mode: 'light' }),
+}));
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (key: string) => key }),
 }));

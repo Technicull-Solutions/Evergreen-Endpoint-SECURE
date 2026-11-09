@@ -77,8 +77,8 @@ export default function Navbar() {
         <img
           src={
             mode === 'dark'
-              ? '/evergreen-endpoint-secure-dark.svg'
-              : '/evergreen-endpoint-secure-light.svg'
+              ? '/ees-wordmark-pale-mint-v2.svg'
+              : '/ees-wordmark-ink-v2.svg'
           }
           alt="Evergreen Endpoint | SECURE"
           width={172}
