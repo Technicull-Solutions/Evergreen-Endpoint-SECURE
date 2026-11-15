@@ -124,8 +124,11 @@ body {
 }
 
 .evergreen-footer-brand {
-  width: min(10.8125rem, 72vw);
+  width: min(150px, 72vw);
+  max-width: 150px;
   height: auto;
+  max-height: 26px;
+  flex: none;
   object-fit: contain;
 }
 

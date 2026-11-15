@@ -181,8 +181,8 @@ export default function App() {
       </HashRouter>
       {/* Footer */}
       <footer className="bg-base-100/50 border-t border-base-300">
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col items-center text-center space-y-4">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex flex-col items-center justify-center gap-3 text-center sm:flex-row sm:gap-4">
             <img
               src={
                 mode === 'dark'
@@ -194,7 +194,7 @@ export default function App() {
               height={30}
               className="evergreen-footer-brand"
             />
-            <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-2 text-xs">
               {PRIVACY_NOTICE_URL && PRIVACY_NOTICE_URL.trim() && (
                 <>
                   <a
