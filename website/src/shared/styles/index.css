@@ -98,35 +98,12 @@ body {
 }
 
 .evergreen-wordmark {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  max-width: min(15.75rem, 58vw);
-}
-
-.evergreen-wordmark-shield {
-  width: 2.5rem;
-  height: 2.5rem;
-  flex: none;
-  object-fit: contain;
-}
-
-.evergreen-wordmark-text {
-  width: min(10.85rem, calc(58vw - 3rem));
-  height: auto;
-  flex: none;
-  object-fit: contain;
+  width: min(15.75rem, 58vw);
 }
 
 .secure-card {
   box-shadow: 0 18px 50px
     color-mix(in srgb, var(--color-secondary) 8%, transparent);
-}
-
-.evergreen-footer-brand {
-  width: min(13rem, 72vw);
-  height: auto;
-  object-fit: contain;
 }
 
 :focus-visible {
@@ -135,16 +112,7 @@ body {
 
 @media (max-width: 520px) {
   .evergreen-wordmark {
-    gap: 0.375rem;
-  }
-
-  .evergreen-wordmark-shield {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .evergreen-wordmark-text {
-    width: min(7.5rem, calc(58vw - 2.375rem));
+    width: 10.75rem;
   }
 }
 

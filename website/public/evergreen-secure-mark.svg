@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Evergreen Endpoint SECURE">
-  <rect width="64" height="64" rx="14" fill="#0D3F30"/>
-  <path fill="#74C7A4" d="M13 13.5 32 7l19 6.5v18.8C51 46 42.9 58.4 32 63 21.1 58.4 13 46 13 32.3V13.5Z" transform="translate(0 -3) scale(1 .93)"/>
-  <path fill="#0D3F30" d="M32 17a10 10 0 0 1 10 10v4h2v18H20V31h2v-4a10 10 0 0 1 10-10Zm0 5a5 5 0 0 0-5 5v4h10v-4a5 5 0 0 0-5-5Zm0 13a3.5 3.5 0 0 0-1.7 6.6V45h3.4v-3.4A3.5 3.5 0 0 0 32 35Z"/>
-  <path stroke="#D69B2D" stroke-width="2" d="M8 55h48"/>
-</svg>

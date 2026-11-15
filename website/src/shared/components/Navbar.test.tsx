@@ -77,7 +77,7 @@ it('uses the default icon without its wordmark when the name is hidden', async (
   const brand = await render();
   expect(brand.textContent).toBe('');
   expect(brand.querySelector('img')!.getAttribute('src')).toBe(
-    '/evergreen-secure-mark.svg',
+    '/evergreen-endpoint-shield.png',
   );
   expect(brand.querySelector('img')!.alt).toBe('Yopass');
   expect(document.title).toBe('Yopass');
@@ -97,10 +97,8 @@ it.each([undefined, 'Acme Secrets'])(
 it('keeps the default wordmark when no branding options are set', async () => {
   localStorage.setItem('themeMode', 'light');
   const brand = await render();
-  const images = brand.querySelectorAll('img');
-  expect(images[0].getAttribute('src')).toBe('/evergreen-secure-shield.png');
-  expect(images[1].getAttribute('src')).toBe(
-    '/evergreen-endpoint-secure-light.png',
+  expect(brand.querySelector('img')!.getAttribute('src')).toBe(
+    '/ees-wordmark-ink-v2.svg',
   );
 });
 

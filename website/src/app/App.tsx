@@ -186,13 +186,13 @@ export default function App() {
             <img
               src={
                 mode === 'dark'
-                  ? '/evergreen-endpoint-secure-dark.png'
-                  : '/evergreen-endpoint-secure-light.png'
+                  ? '/ees-wordmark-pale-mint-v2.svg'
+                  : '/ees-wordmark-ink-v2.svg'
               }
               alt="Evergreen Endpoint | SECURE"
-              width={346}
-              height={60}
-              className="evergreen-footer-brand"
+              width={172}
+              height={30}
+              className="h-7 w-auto"
             />
             <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
               {PRIVACY_NOTICE_URL && PRIVACY_NOTICE_URL.trim() && (

@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="318" height="72" viewBox="0 0 318 72" role="img" aria-labelledby="title description">
-  <title id="title">Evergreen Endpoint | SECURE</title>
-  <desc id="description">Evergreen Endpoint SECURE product wordmark</desc>
-  <g fill="none" fill-rule="evenodd">
-    <path fill="#176B4D" d="M7 8.5 25 2l18 6.5v17.8c0 13-7.7 24.8-18 29.7C14.7 51.1 7 39.3 7 26.3V8.5Z"/>
-    <path fill="#F7FAF8" d="M25 12.2c5.3 0 9.7 4.3 9.7 9.7v4.2h2.4v18H12.9v-18h2.4v-4.2c0-5.4 4.4-9.7 9.7-9.7Zm0 5.4a4.3 4.3 0 0 0-4.3 4.3v4.2h8.6v-4.2a4.3 4.3 0 0 0-4.3-4.3Zm0 13.6a3.3 3.3 0 0 0-1.6 6.2v3h3.2v-3a3.3 3.3 0 0 0-1.6-6.2Z"/>
-    <g fill="#17211D" font-family="Lato, Segoe UI, Arial, sans-serif">
-      <text x="57" y="29" font-size="12" font-weight="800" textLength="84" lengthAdjust="spacing">EVERGREEN</text>
-      <text x="57" y="46" font-size="12" font-weight="800" textLength="84" lengthAdjust="spacing">ENDPOINT</text>
-      <text x="170" y="43" font-size="24" font-weight="500" letter-spacing="1.5">SECURE</text>
-    </g>
-    <path stroke="#D69B2D" stroke-width="2" d="M156 16v40"/>
-  </g>
-</svg>
+<svg width="172.184" xmlns="http://www.w3.org/2000/svg" height="30" id="screenshot-c0cab275-7121-804f-8008-e28fd43d00c3" viewBox="0 0 172.184 30" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1"><style>@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: block;
+    src: url(https://penpot.technicull.ca/assets/by-id/56f2b326-35b7-49fb-b9cf-b8d449396101) format('woff');
+  }
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://penpot.technicull.ca/assets/by-id/23d93929-b6ac-4b3b-9c0e-818ed8166bce) format('woff');
+  }</style><g id="shape-c0cab275-7121-804f-8008-e28fd43d00c3"><g class="frame-container-wrapper"><g class="frame-container-blur"><g class="frame-container-shadows"><g fill="none"><g class="fills" id="fills-c0cab275-7121-804f-8008-e28fd43d00c3"><rect rx="0" ry="0" x="0" y="0" width="150" height="30" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" class="frame-background"/></g><g class="frame-children"><g id="shape-c0cab275-7121-804f-8008-e28fd43d00c4"><g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" class="text-container" x="0" y="1" width="75.46012269938649" height="14" rx="0" ry="0"><defs><pattern patternUnits="objectBoundingBox" width="80.70105743408203" height="16.931217193603516" id="fill-0-render-2-0"><g><rect width="80.70105743408203" height="16.931217193603516" style="fill: rgb(23, 33, 29); fill-opacity: 1;"/></g></pattern></defs><g class="fills" id="fills-c0cab275-7121-804f-8008-e28fd43d00c4"><text x="0" y="17.50793680548668" dominant-baseline="ideographic" textLength="80.70105743408203" lengthAdjust="spacingAndGlyphs" style="text-transform: none; font-family: Lato; letter-spacing: normal; font-style: normal; font-weight: 700; white-space: pre; font-size: 14px; text-decoration: none; direction: ltr; fill: rgb(23, 33, 29); fill-opacity: 1;">EVERGREEN</text></g></g></g><g id="shape-c0cab275-7121-804f-8008-e28fd43d00c5"><g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" class="text-container" x="0" y="15" width="75.46012269938649" height="14" rx="0" ry="0"><defs><pattern patternUnits="objectBoundingBox" width="81.911376953125" height="16.931217193603516" id="fill-0-render-3-0"><g><rect width="81.911376953125" height="16.931217193603516" style="fill: rgb(23, 33, 29); fill-opacity: 1;"/></g></pattern></defs><g class="fills" id="fills-c0cab275-7121-804f-8008-e28fd43d00c5"><text x="0" y="31.50793680548668" dominant-baseline="ideographic" textLength="81.911376953125" lengthAdjust="spacingAndGlyphs" style="text-transform: none; font-family: Lato; letter-spacing: 1.2px; font-style: normal; font-weight: 700; white-space: pre; font-size: 14px; text-decoration: none; direction: ltr; fill: rgb(23, 33, 29); fill-opacity: 1;">ENDPOINT</text></g></g></g><g id="shape-c0cab275-7121-804f-8008-e28fd43d00c6"><g class="fills" id="fills-c0cab275-7121-804f-8008-e28fd43d00c6"><rect rx="0" ry="0" x="86.98159509202446" y="0" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" width="1.8404907975460674" height="30" style="fill: rgb(214, 155, 45); fill-opacity: 1;"/></g></g><g id="shape-c0cab275-7121-804f-8008-e28fd43d00c7"><g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" class="text-container" x="96.18404907975469" y="3" width="76.00000000000006" height="24" rx="0" ry="0"><defs><pattern patternUnits="objectBoundingBox" width="75.02645111083984" height="24.126981735229492" id="fill-0-render-5-0"><g><rect width="75.02645111083984" height="24.126981735229492" style="fill: rgb(23, 33, 29); fill-opacity: 1;"/></g></pattern></defs><g class="fills" id="fills-c0cab275-7121-804f-8008-e28fd43d00c7"><text x="96.18404907975469" y="26.703701347112656" dominant-baseline="ideographic" textLength="75.02645111083984" lengthAdjust="spacingAndGlyphs" style="text-transform: none; font-family: Lato; letter-spacing: normal; font-style: normal; font-weight: 400; white-space: pre; font-size: 20px; text-decoration: none; direction: ltr; fill: rgb(23, 33, 29); fill-opacity: 1;">SECURE</text></g></g></g></g></g></g></g></g></g></svg>
