@@ -97,8 +97,10 @@ it.each([undefined, 'Acme Secrets'])(
 it('keeps the default wordmark when no branding options are set', async () => {
   localStorage.setItem('themeMode', 'light');
   const brand = await render();
-  expect(brand.querySelector('img')!.getAttribute('src')).toBe(
-    '/evergreen-endpoint-secure-light.svg',
+  const images = brand.querySelectorAll('img');
+  expect(images[0].getAttribute('src')).toBe('/evergreen-secure-shield.png');
+  expect(images[1].getAttribute('src')).toBe(
+    '/evergreen-endpoint-secure-light.png',
   );
 });
 
