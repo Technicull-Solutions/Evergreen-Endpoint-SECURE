@@ -186,12 +186,12 @@ export default function App() {
             <img
               src={
                 mode === 'dark'
-                  ? '/evergreen-endpoint-secure-dark.png'
-                  : '/evergreen-endpoint-secure-light.png'
+                  ? '/evergreen-footer-secure-on-dark.png'
+                  : '/evergreen-footer-secure-on-light.png'
               }
               alt="Evergreen Endpoint | SECURE"
-              width={346}
-              height={60}
+              width={173}
+              height={30}
               className="evergreen-footer-brand"
             />
             <div className="flex flex-wrap items-center justify-center gap-2 text-sm">

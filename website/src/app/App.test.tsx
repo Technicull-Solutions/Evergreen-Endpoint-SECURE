@@ -187,3 +187,15 @@ it('keeps existing-request pages available while new creation is disabled', asyn
   await clickText('Existing request link');
   expect(container.textContent).toContain('Respond to existing request');
 });
+
+it('uses the compact light-theme footer wordmark', () => {
+  const footerBrand = container.querySelector<HTMLImageElement>(
+    'footer .evergreen-footer-brand',
+  );
+
+  expect(footerBrand?.getAttribute('src')).toBe(
+    '/evergreen-footer-secure-on-light.png',
+  );
+  expect(footerBrand?.getAttribute('width')).toBe('173');
+  expect(footerBrand?.getAttribute('height')).toBe('30');
+});
