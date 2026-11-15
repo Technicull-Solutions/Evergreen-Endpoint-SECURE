@@ -74,17 +74,30 @@ export default function Navbar() {
           )}
         </>
       ) : (
-        <img
-          src={
-            mode === 'dark'
-              ? '/ees-wordmark-pale-mint-v2.svg'
-              : '/ees-wordmark-ink-v2.svg'
-          }
-          alt="Evergreen Endpoint | SECURE"
-          width={172}
-          height={30}
-          className="evergreen-wordmark h-7 w-auto sm:h-8 shrink-0"
-        />
+        <span
+          className="evergreen-wordmark"
+          role="img"
+          aria-label="Evergreen Endpoint | SECURE"
+        >
+          <img
+            src="/evergreen-secure-shield.png"
+            alt=""
+            width={40}
+            height={40}
+            className="evergreen-wordmark-shield"
+          />
+          <img
+            src={
+              mode === 'dark'
+                ? '/evergreen-endpoint-secure-dark.png'
+                : '/evergreen-endpoint-secure-light.png'
+            }
+            alt=""
+            width={346}
+            height={60}
+            className="evergreen-wordmark-text"
+          />
+        </span>
       )}
     </a>
   );
